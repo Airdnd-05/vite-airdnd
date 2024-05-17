@@ -43,11 +43,10 @@ body:
       label: 구현 세부 사항
       description: 리팩토링의 세부 사항을 작성해주세요.
       placeholder: |
+        예시
         1. React-Router-Dom 라이브러리와 관련된 코드를 제거합니다.
         2. Next.js 프로젝트를 설치합니다.
         3. 관련 컴포넌트 및 페이지 파일 구조를 변경합니다.
-    validations:
-      required: false
 
   - type: textarea
     id: test_instructions
@@ -57,14 +56,9 @@ body:
       placeholder: |
         - REST 테스트 도구를 사용하여 API 테스트를 수행합니다.
 
-    validations:
-      required: false
-
   - type: textarea
     id: additional_info
     attributes:
       label: 추가 정보
       description: 추가로 필요한 정보가 있다면 적어주세요.
       placeholder: 기타 필요한 정보가 있다면 여기에 추가하세요.
-    validations:
-      required: false

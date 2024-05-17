@@ -43,7 +43,7 @@ body:
       label: 작업 세부 사항
       description: 작업의 세부 사항을 작성해주세요.
       placeholder: |
-        예시)
+        예시
         - package.json 업데이트
         - .env.example 파일 수정
         - build.gradle 수정
@@ -56,12 +56,10 @@ body:
       label: 테스트 방법
       description: 작업 후 테스트 방법을 작성해주세요.
       placeholder: |
-        예시)
+        예시
         - npm install 후 정상적으로 동작하는지 확인
         - 환경변수가 제대로 설정되어 있는지 확인
         - 빌드가 성공적으로 완료되는지 확인
-    validations:
-      required: false
 
   - type: textarea
     id: additional_info
@@ -69,5 +67,3 @@ body:
       label: 추가 정보
       description: 추가로 필요한 정보가 있다면 적어주세요.
       placeholder: 기타 필요한 정보가 있다면 여기에 추가하세요.
-    validations:
-      required: false

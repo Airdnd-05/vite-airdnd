@@ -25,7 +25,7 @@ body:
       label: 재현 방법
       description: 버그를 재현하는 방법을 단계별로 설명하세요.
       placeholder: |
-        예시)
+        예시
         1. 로그인 페이지로 이동
         2. 잘못된 자격 증명 입력
         3. '로그인' 버튼 클릭
@@ -48,8 +48,6 @@ body:
       label: 스크린샷
       description: 오류를 보여주는 스크린샷을 추가해주세요.
       placeholder: 스크린샷을 여기에 추가하세요.
-    validations:
-      required: false
 
   - type: textarea
     id: additional_info
@@ -57,5 +55,3 @@ body:
       label: 추가 정보
       description: 추가로 필요한 정보가 있다면 적어주세요.
       placeholder: 기타 필요한 정보가 있다면 여기에 추가하세요.
-    validations:
-      required: false
