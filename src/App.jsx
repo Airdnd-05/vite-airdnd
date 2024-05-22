@@ -1,7 +1,12 @@
 import './App.css';
+import Layout from './components/Layout/Layout.jsx';
 
 function App() {
-  return <>{/* 메인페이지 여기다 만듭시다*/}</>;
+  return (
+    <>
+      <Layout>{/* 여기 넣으세요!@ */}</Layout>
+    </>
+  );
 }
 
 export default App;
