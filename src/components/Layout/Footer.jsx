@@ -44,53 +44,55 @@ function Footer() {
     },
   ];
   return (
-    <div className="flex flex-col px-20 bg-gray-100 w-full">
-      <div className="grid grid-cols-3 gap-16px border-y-2 py-[30px]">
-        {FooterItem.map((section, index) => (
-          <ul key={index} className="flex flex-col items-start space-y-2 text-sm">
-            <li className="first:font-bold">{section.title}</li>
-            {section.items.map((item, idx) => (
-              <li className="hover:underline cursor-pointer" key={idx}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        ))}
-      </div>
-
-      <div className="flex flex-row py-[10px] px-20 border-y border-solid border-gray-200">
-        <div className="flex justify-between w-full">
-          <ul className="flex flex-row items-center pr-10 text-sm">
-            {FooterInfo.map((item, index) => (
-              <li className="hover:underline cursor-pointer pr-2" key={index}>
-                {index !== 0 && <span className="mr-2"></span>}
-                {item.title}
-              </li>
-            ))}
-          </ul>
-          <ul className="flex flex-row items-center pr-10 text-sm">
-            <li className="flex pr-2">
-              <img src={HeaderWorld} alt="world" className="pr-2" />
-              한국어(KR)
-            </li>
-            <li className="pr-2">
-              <b>₩</b> KRW
-            </li>
-            <li>
-              <img src={FooterIcon} />
-            </li>
-          </ul>
+    <div className="bg-gray-100 px-20">
+      <div className="flex flex-col mx-56 bg-gray-100">
+        <div className="grid grid-cols-3 gap-16px border-y-2 py-[30px]">
+          {FooterItem.map((section, index) => (
+            <ul key={index} className="flex flex-col items-start space-y-2 text-sm">
+              <li className="first:font-bold">{section.title}</li>
+              {section.items.map((item, idx) => (
+                <li className="hover:underline cursor-pointer" key={idx}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
-      </div>
-      <div>
-        <p className="text-[10px] py-5 text-left">
-          웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, D02 DP23 Ireland |
-          이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L | 사업자 등록 번호: IE 511825 |
-          연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는
-          통신판매 중개자로 에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다.
-          에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당 서비스를 제공하는
-          호스트에게 있습니다.
-        </p>
+
+        <div className="flex flex-row py-[10px] border-y border-solid border-gray-200">
+          <div className="flex justify-between w-full">
+            <ul className="flex flex-row items-center pr-10 text-sm">
+              {FooterInfo.map((item, index) => (
+                <li className="hover:underline cursor-pointer pr-2" key={index}>
+                  {index !== 0 && <span className="mr-2"></span>}
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-row items-center pr-10 text-sm">
+              <li className="flex pr-2">
+                <img src={HeaderWorld} alt="world" className="pr-2" />
+                한국어(KR)
+              </li>
+              <li className="pr-2">
+                <b>₩</b> KRW
+              </li>
+              <li>
+                <img src={FooterIcon} />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] py-5 text-left">
+            웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, D02 DP23 Ireland |
+            이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L | 사업자 등록 번호: IE 511825
+            | 연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는
+            통신판매 중개자로 에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다.
+            에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당 서비스를 제공하는
+            호스트에게 있습니다.
+          </p>
+        </div>
       </div>
     </div>
   );

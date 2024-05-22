@@ -6,7 +6,9 @@ function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="w-full h-full flex-grow px-20">{children}</main>
+      <main className="w-full h-full flex-grow px-40">
+        <div className="max-w-[1120px] m-auto">{children}</div>
+      </main>
       <Footer />
     </div>
   );
