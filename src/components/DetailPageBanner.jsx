@@ -7,7 +7,7 @@ import useHeartIcon from '../assets/useHeartIcon.svg'
 function ImgBanner({ src, dataOriginalUri }) {
   return (
     <div>
-      <img className="hover:brightness-75 w-full" src={src} data-original-uri={dataOriginalUri}></img>
+      <img className="w-full hover:brightness-75" src={src} data-original-uri={dataOriginalUri}></img>
     </div>
   );
 }
@@ -17,12 +17,12 @@ function Banner({ img }) {
   const detailImg = [img.pic1, img.pic2, img.pic3, img.pic4];
 
   return (
-    <div className="grid grid-cols-4 grid-rows-2 gap-2 rounded-lg overflow-hidden">
-      <div className="col-span-2 row-span-2 -ml-2 -mb-2">
+    <div className="grid grid-cols-4 grid-rows-2 gap-2 overflow-hidden rounded-lg">
+      <div className="col-span-2 row-span-2 -mb-2 -ml-2">
         <ImgBanner src={mainIng.https} dataOriginalUri={mainIng['data-original-uri']} />
       </div>
-      {detailImg.map(eachImg => {
-        return <ImgBanner src={eachImg.https} dataOriginalUri={eachImg['data-original-uri']} />;
+      {detailImg.map((eachImg, index) => {
+        return <ImgBanner key={index} src={eachImg.https} dataOriginalUri={eachImg['data-original-uri']} />;
       })}
     </div>
   );
@@ -65,7 +65,7 @@ function DetailPageBanner() {
   };
 
   return (
-    <div className="mx-20">
+    <div>
       <div className="flex justify-between mb-3">
         <BannerTitle>{titleInfo}</BannerTitle>
 
