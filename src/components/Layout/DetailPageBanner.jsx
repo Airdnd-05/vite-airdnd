@@ -7,7 +7,7 @@ import unUseHeartIcon from '../../assets/svgexport-10.svg';
 function ImgBanner({ src, dataOriginalUri }) {
   return (
     <div>
-      <img className="hover:brightness-75" src={src} data-original-uri={dataOriginalUri}></img>
+      <img className="hover:brightness-75 w-full" src={src} data-original-uri={dataOriginalUri}></img>
     </div>
   );
 }
