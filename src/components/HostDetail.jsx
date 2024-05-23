@@ -1,10 +1,9 @@
-import HostDescription from '../assets/HostDescription.svg'
 import HostLanguage from '../assets/HostLanguage.svg'
 import Notice from '../assets/Notice.svg'
 import HostLocation from '../assets/HostLocation.svg'
 import DescriptionDetail from '../assets/DescriptionDetail.svg'
 import HostRate from "../assets/HostRate.svg"
-import TempPersonImg from '../assets/TempPersonImg.webp'
+import TempPersonImg from '../assets/tempPerson.webp'
 
 
 function App() {
