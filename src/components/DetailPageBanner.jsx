@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import detailPageBanner from '../../detail-page-banner.json';
-import shareIcon from '../../assets/svgexport-9.svg';
-import useHeartIcon from '../../assets/svgexport-8.svg';
-import unUseHeartIcon from '../../assets/svgexport-10.svg';
+import detailPageBanner from '../detail-page-banner.json'
+import shareIcon from '../assets/shareIcon.svg'
+import unUseHeartIcon from '../assets/unUseHeartIcon.svg'
+import useHeartIcon from '../assets/useHeartIcon.svg'
 
 function ImgBanner({ src, dataOriginalUri }) {
   return (
