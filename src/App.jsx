@@ -1,18 +1,19 @@
 import './App.css';
+import DetailPageBanner from './components/DetailPageBanner.jsx';
 import Layout from './components/Layout/Layout.jsx';
-import Test from './components/Test.jsx';
+import HostDetail from './components/HostDetail.jsx';
+import BriefInfo from './components/briefInfo/BriefInfo.jsx';
+import AmenityInfo from './components/briefInfo/AmenityInfo.jsx';
 
 function App() {
   return (
     <>
       <Layout>
         {/* 여기 넣으세요!@ */}
-        <Test />
-        <Test />
-        <Test />
-        <Test />
-        <Test />
-        <Test />
+        <DetailPageBanner />
+        <BriefInfo />
+        <AmenityInfo />
+        <HostDetail />
       </Layout>
     </>
   );
