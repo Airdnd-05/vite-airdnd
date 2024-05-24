@@ -44,7 +44,7 @@ function Footer() {
     },
   ];
   return (
-    <div className="bg-gray-100 px-20">
+    <footer className="bg-gray-100 px-20">
       <div className="flex flex-col mx-56 bg-gray-100">
         <div className="grid grid-cols-3 gap-16px border-y-2 py-[30px]">
           {FooterItem.map((section, index) => (
@@ -94,7 +94,7 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
