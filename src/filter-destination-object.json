@@ -1,0 +1,448 @@
+{
+  "한국": [
+    {
+      "name": "Seoul",
+      "label": "서울"
+    },
+    {
+      "name": "Busan",
+      "label": "부산"
+    },
+    {
+      "name": "Sokcho",
+      "label": "속초"
+    },
+    {
+      "name": "Gangneung",
+      "label": "강릉"
+    },
+    {
+      "name": "Jeonju",
+      "label": "전주"
+    },
+    {
+      "name": "Daegu",
+      "label": "대구"
+    },
+    {
+      "name": "Gyeongju",
+      "label": "경주"
+    },
+    {
+      "name": "Yeosu",
+      "label": "여수"
+    },
+    {
+      "name": "Seogwipo",
+      "label": "서귀포"
+    },
+    {
+      "name": "Daejeon",
+      "label": "대전"
+    },
+    {
+      "name": "Jeju",
+      "label": "제주도"
+    },
+    {
+      "name": "Incheon",
+      "label": "인천"
+    }
+  ],
+  "전세계": [
+    {
+      "name": "Osaka",
+      "label": "오사카"
+    },
+    {
+      "name": "Tokyo",
+      "label": "도쿄"
+    },
+    {
+      "name": "Fukuoka",
+      "label": "후쿠오카"
+    },
+    {
+      "name": "Bangkok",
+      "label": "방콕"
+    },
+    {
+      "name": "London",
+      "label": "런던"
+    },
+    {
+      "name": "ChiangMai",
+      "label": "치앙마이"
+    },
+    {
+      "name": "Taipei",
+      "label": "타이베이"
+    },
+    {
+      "name": "Sydney",
+      "label": "시드니"
+    },
+    {
+      "name": "Sapporo",
+      "label": "삿포로"
+    },
+    {
+      "name": "Grindelwald",
+      "label": "그린발데르"
+    },
+    {
+      "name": "Barcelona",
+      "label": "바르셀로나"
+    },
+    {
+      "name": "Interlaken",
+      "label": "인터라켄"
+    }
+  ],
+  "동아시아": [
+    {
+      "name": "Osaka",
+      "label": "오사카"
+    },
+    {
+      "name": "Tokyo",
+      "label": "도쿄"
+    },
+    {
+      "name": "Fukuoka",
+      "label": "후쿠오카"
+    },
+    {
+      "name": "Taipei",
+      "label": "타이베이"
+    },
+    {
+      "name": "Sapporo",
+      "label": "삿포로"
+    },
+    {
+      "name": "Okinawa",
+      "label": "오키나와"
+    },
+    {
+      "name": "Kyoto",
+      "label": "교토"
+    },
+    {
+      "name": "Nagoya",
+      "label": "나고야"
+    },
+    {
+      "name": "Beppu",
+      "label": "벳푸"
+    },
+    {
+      "name": "Yufu",
+      "label": "유후"
+    },
+    {
+      "name": "Hiroshima",
+      "label": "히로시마"
+    },
+    {
+      "name": "Naha",
+      "label": "나하"
+    }
+  ],
+  "동남아시아": [
+    {
+      "name": "Bangkok",
+      "label": "방콕"
+    },
+    {
+      "name": "ChiangMai",
+      "label": "치앙마이"
+    },
+    {
+      "name": "Hanoi",
+      "label": "하노이"
+    },
+    {
+      "name": "Pattaya",
+      "label": "파타야"
+    },
+    {
+      "name": "NhaTrang",
+      "label": "냐짱"
+    },
+    {
+      "name": "Cebu",
+      "label": "세부"
+    },
+    {
+      "name": "HoiAn",
+      "label": "호이안"
+    },
+    {
+      "name": "Dalat",
+      "label": "달랏"
+    },
+    {
+      "name": "Danang",
+      "label": "다낭"
+    },
+    {
+      "name": "Manila",
+      "label": "마닐라"
+    },
+    {
+      "name": "Angeles",
+      "label": "엔젤레스"
+    },
+    {
+      "name": "KotaKinabalu",
+      "label": "코타키나발루"
+    }
+  ],
+  "유럽": [
+    {
+      "name": "London",
+      "label": "런던"
+    },
+    {
+      "name": "Grindelwald",
+      "label": "그린델발트"
+    },
+    {
+      "name": "Barcelona",
+      "label": "바르셀로나"
+    },
+    {
+      "name": "Interlaken",
+      "label": "인터라켄"
+    },
+    {
+      "name": "Prague",
+      "label": "프라하"
+    },
+    {
+      "name": "Seville",
+      "label": "세비야"
+    },
+    {
+      "name": "Paris",
+      "label": "파리"
+    },
+    {
+      "name": "Budapest",
+      "label": "부다페스트"
+    },
+    {
+      "name": "Madrid",
+      "label": "마드리드"
+    },
+    {
+      "name": "Lisbon",
+      "label": "리스본"
+    },
+    {
+      "name": "Vienna",
+      "label": "빈"
+    },
+    {
+      "name": "Nice",
+      "label": "니스"
+    }
+  ],
+  "북남미": [
+    {
+      "name": "LosAngeles",
+      "label": "로스앤젤레스"
+    },
+    {
+      "name": "Honolulu",
+      "label": "호놀룰루"
+    },
+    {
+      "name": "NewYork",
+      "label": "뉴욕"
+    },
+    {
+      "name": "Vancouver",
+      "label": "밴쿠버"
+    },
+    {
+      "name": "LasVegas",
+      "label": "라스베이거스"
+    },
+    {
+      "name": "Toronto",
+      "label": "토론토"
+    },
+    {
+      "name": "KailuaKona",
+      "label": "카일루아코나"
+    },
+    {
+      "name": "JoshuaTree",
+      "label": "조슈아 트리"
+    },
+    {
+      "name": "SanFrancisco",
+      "label": "샌프란시스코"
+    },
+    {
+      "name": "SanDiego",
+      "label": "샌디에이고"
+    },
+    {
+      "name": "Hilo",
+      "label": "힐로"
+    },
+    {
+      "name": "Boston",
+      "label": "보스턴"
+    }
+  ],
+  "오세아니아": [
+    {
+      "name": "Sydney",
+      "label": "시드니"
+    },
+    {
+      "name": "Melbourne",
+      "label": "멜버른"
+    },
+    {
+      "name": "Wanaka",
+      "label": "와나카"
+    },
+    {
+      "name": "Auckland",
+      "label": "오클랜드"
+    },
+    {
+      "name": "Brisbane",
+      "label": "브리즈번"
+    },
+    {
+      "name": "Christchurch",
+      "label": "크라이스트처치"
+    },
+    {
+      "name": "GoldCoast",
+      "label": "골드코스트"
+    },
+    {
+      "name": "TeAnau",
+      "label": "테아나우"
+    },
+    {
+      "name": "LakeTekapo",
+      "label": "테카포 호수"
+    },
+    {
+      "name": "SurryHills",
+      "label": "서리 힐스"
+    },
+    {
+      "name": "Hamilton",
+      "label": "해밀턴"
+    }
+  ],
+  "기타 아시아 지역": [
+    {
+      "name": "Istanbul",
+      "label": "이스탄불"
+    },
+    {
+      "name": "Ulaanbaatar",
+      "label": "울란바토르"
+    },
+    {
+      "name": "Antalya",
+      "label": "안탈리아"
+    },
+    {
+      "name": "Almaty",
+      "label": "알마티"
+    },
+    {
+      "name": "Tbilisi",
+      "label": "트빌리시"
+    },
+    {
+      "name": "Budabi",
+      "label": "부다비"
+    },
+    {
+      "name": "Izmir",
+      "label": "이즈미르"
+    },
+    {
+      "name": "Amman",
+      "label": "암만"
+    },
+    {
+      "name": "Colombo",
+      "label": "콜롬보"
+    },
+    {
+      "name": "Ankara",
+      "label": "앙카라"
+    },
+    {
+      "name": "Pamukkale",
+      "label": "파묵칼레"
+    },
+    {
+      "name": "Kas",
+      "label": "카스"
+    }
+  ],
+  "아프리카": [
+    {
+      "name": "Cairo",
+      "label": "카이로"
+    },
+    {
+      "name": "CapeTown",
+      "label": "케이프타운"
+    },
+    {
+      "name": "Luxor",
+      "label": "룩소르"
+    },
+    {
+      "name": "Marrakesh",
+      "label": "마라케시"
+    },
+    {
+      "name": "Casablanca",
+      "label": "카사블랑카"
+    },
+    {
+      "name": "Alexandria",
+      "label": "알렉산드리아"
+    },
+    {
+      "name": "Tangier",
+      "label": "탕헤르"
+    },
+    {
+      "name": "Rabat",
+      "label": "라바트"
+    },
+    {
+      "name": "Dahab",
+      "label": "다합"
+    },
+    {
+      "name": "Nairobi",
+      "label": "나이로비"
+    },
+    {
+      "name": "Hurghada",
+      "label": "후르가다"
+    },
+    {
+      "name": "Fez",
+      "label": "페스"
+    }
+  ]
+}

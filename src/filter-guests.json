@@ -1,0 +1,50 @@
+{
+  "labels": [
+    {
+      "label": "성인",
+      "name": "adults",
+      "description": "13세 이상",
+      "default": 1,
+      "actionType": {
+        "increase": "INCREASE_ADULTS",
+        "decrease": "DECREASE_ADULTS"
+      }
+    },
+    {
+      "label": "어린이",
+      "name": "children",
+      "description": "2-12세",
+      "default": 0,
+      "actionType": {
+        "increase": "INCREASE_CHILDREN",
+        "decrease": "DECREASE_CHILDREN"
+      }
+    },
+    {
+      "label": "유아",
+      "name": "infants",
+      "description": "2세 미만",
+      "default": 0,
+      "actionType": {
+        "increase": "INCREASE_INFANTS",
+        "decrease": "DECREASE_INFANTS"
+      }
+    },
+    {
+      "label": "반려동물",
+      "name": "pets",
+      "description": "보조동물을 동반하십니까?",
+      "default": 0,
+      "actionType": {
+        "increase": "INCREASE_PETS",
+        "decrease": "DECREASE_PETS"
+      }
+    }
+  ],
+  "initialState": {
+    "adults": 1,
+    "children": 0,
+    "infants": 0,
+    "pets": 0
+  }
+}

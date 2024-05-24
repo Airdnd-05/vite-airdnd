@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout.jsx';
 import HostDetail from './components/HostDetail.jsx';
 import BriefInfo from './components/briefInfo/BriefInfo.jsx';
 import AmenityInfo from './components/briefInfo/AmenityInfo.jsx'
+import ContextTest from './components/context/ContextTest.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <BriefInfo />
         <AmenityInfo />
         <HostDetail />
+        <ContextTest />        
       </Layout>
     </>
   );
