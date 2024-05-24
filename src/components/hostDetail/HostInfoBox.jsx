@@ -1,5 +1,4 @@
 import hostInfo from "../../host-detail.json"
-import TempPersonImg from '../../assets/tempPerson.webp'
 import isSuperHostIcon from "../../assets/isSuperHostIcon.svg"
 import HostRate from "../../assets/HostRate.svg"
 
@@ -7,14 +6,14 @@ function HostInfoBox(){
 
     return (
 
-<div className="w-80 h-[12rem] shadow-lg mt-10 ml-14  bg-[white] rounded-[21px]  ">
-   
+
+        <div className="w-80 h-[12rem] shadow-lg mt-10 ml-14  bg-[white] rounded-[21px]  ">
    <div className="flex flex-row items-center">
        
        <div className="ml-12 mt-4 mr-10">
-   
+ 
        <div className="w-24 h-24 bg-gray-200 rounded-full overflow-hidden">
-            <img src={TempPersonImg} alt="" className="object-cover w-full h-full"/>
+            <img src={hostInfo.hostProfile.hostImageUrl} alt="" className="object-cover w-full h-full"/>
         </div>
    
        <div className='flex flex-col items-center mt-2'>
@@ -54,7 +53,8 @@ function HostInfoBox(){
            </div>
        </div>
        </div>
-       </div>
+</div>
+
     )
 }
 
