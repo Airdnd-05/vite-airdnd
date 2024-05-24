@@ -62,20 +62,20 @@ function App() {
    
    
            </div>
-           <div className="ml-[4rem] mt-[1.9rem] rounded ">
+           <div className="ml-[4rem] mt-[1.4rem] rounded ">
            <div className='flex flex-row mb-[0.5rem] items-center'>
             <img src={HostLanguage} className='pr-2 w-[2rem]' ></img>
-           <div className="text-left  text-xs">구사 언어: 영어 및 한국어</div> 
+           <div className="text-left  text-sm">구사 언어: 영어 및 한국어</div> 
             </div>         
 
             <div className='flex flex-row items-center'>
                 <img src={HostLocation} className='pr-2  w-[2rem]'></img>   
-                <div className=" text-left text-xs">거주지: 한국</div>
+                <div className=" text-left text-sm">거주지: 한국</div>
            
             </div>
            
                
-            <div className="mt-[1.3rem] text-left text-xs">ONDA는 다양한 숙박업소분들과 함께 일하는 팀입니다. 한국의 각 지역의 멋진 숙박업소를 찾아 고객님께...</div>   
+            <div className="mt-[1rem] text-left text-sm">ONDA는 다양한 숙박업소분들과 함께 일하는 팀입니다. 한국의 각 지역의 멋진 숙박업소를 찾아 고객님께...</div>   
             <div className='mt-[0.5rem] flex flex-row'>
                 <div className="font-bold underline text-left text-sm">더 보기</div>   
                 <img src={DescriptionDetail} className='w-[1rem] pl-2'></img>
