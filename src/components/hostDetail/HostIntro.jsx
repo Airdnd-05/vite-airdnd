@@ -26,8 +26,10 @@ function HostIntro(){
         </>}
         
 
-            
-        <div className="mt-[1rem] text-left text-sm w-full">{hostInfo.hostDescription}...</div>   
+        {hostInfo.hostDescription ? (
+            <div className="mt-[1rem] text-left text-sm w-full">{hostInfo.hostDescription}...</div>
+            ) : null}
+        
         <div className='mt-[0.5rem] flex flex-row'>
             <div className="font-bold underline text-left text-sm">더 보기</div>   
             <img src={DescriptionDetail} className='w-[1rem] pl-2'></img>
