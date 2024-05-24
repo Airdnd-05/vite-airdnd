@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    colors:{
+      'host-detail-gray': '#f0efe9',
+    }
   },
   plugins: [],
 }

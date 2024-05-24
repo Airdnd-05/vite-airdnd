@@ -10,7 +10,7 @@ function HostDetail() {
 
     return (
    
-          <div className="bg-stone-200 flex flex-row h-[30rem] rounded-[17px] ">
+          <div className="bg-host-detail-gray flex flex-row h-[30rem] rounded-[17px] ">
                 <div className="ml-10 flex flex-row  ">
                     <div className="flex flex-col  basis-1/3">
 
