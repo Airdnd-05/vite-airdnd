@@ -8,15 +8,23 @@ function HostIntro(){
     return (
         <div className="ml-[4rem] mt-[1.2rem] ">
         <div className='flex flex-row mb-[0.5rem] '>
-        <img src={HostLanguage} className='pr-2 w-[2rem]' ></img>
-        <div className="text-left  text-sm">구사 언어: {hostInfo.hostProfile.hostLanguage}</div> 
+        
+        { hostInfo.hostProfile.hostLanguage && 
+        <>
+            <img src={HostLanguage} className='pr-2 w-[2rem]' ></img>
+            <div className="text-left  text-sm">구사 언어: {hostInfo.hostProfile.hostLanguage}</div>
+        </>
+         }
         </div>         
 
-        <div className='flex flex-row '>
+        {hostInfo.hostProfile.hostLocation && 
+        <>
+            <div className='flex flex-row '>
             <img src={HostLocation} className='pr-2  w-[2rem]'></img>   
             <div className=" text-left text-sm">거주지: {hostInfo.hostProfile.hostLocation}</div>
-
         </div>
+        </>}
+        
 
             
         <div className="mt-[1rem] text-left text-sm w-full">{hostInfo.hostDescription}...</div>   
