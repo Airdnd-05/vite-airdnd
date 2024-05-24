@@ -4,16 +4,21 @@ import HostInfoBox from "./HostInfoBox.jsx"
 import HostIntro from "./HostIntro.jsx"
 import HostDetailInfo from './HostDetailInfo.jsx'
 import hostInfo from '../../host-detail.json'
+import BeginnerHostInfoBox from './BeginnerHostInfoBox.jsx'
 
 function HostDetail() {
 
     return (
    
-          <div className="bg-stone-200 flex flex-row h-[27rem] rounded-[20px] ">
+          <div className="bg-stone-200 flex flex-row h-[30rem] rounded-[17px] ">
                 <div className="ml-10 flex flex-row  ">
                     <div className="flex flex-col  basis-1/3">
-                        <HostInfoBox></HostInfoBox>    
-                        <HostIntro></HostIntro>
+
+                    {hostInfo.hostProfile.hostReviewCount === 0 ?
+                        <BeginnerHostInfoBox></BeginnerHostInfoBox>  
+                    : <HostInfoBox></HostInfoBox>    }
+                    
+                    <HostIntro></HostIntro>
                      </div>
                 </div>
                    
@@ -45,4 +50,3 @@ function HostDetail() {
    }
    
    export default HostDetail
-   
