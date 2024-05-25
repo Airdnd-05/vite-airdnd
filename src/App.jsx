@@ -1,14 +1,20 @@
-import React from 'react';
-import CommentForm from './components/CommentForm';
-import './index.css';
+import './App.css';
+import Layout from './components/Layout/Layout.jsx';
+import ReviewDetails from './components/ReviewDetails'; // ReviewDetails 컴포넌트를 import
+import Comment from './components/comment'; // Comment 컴포넌트를 import
 
-const App = () => {
+function App() {
   return (
-    <div className="container">
-      <h1>댓글창</h1>
-      <CommentForm />
-    </div>
+    <>
+      <Layout>
+
+        <ReviewDetails />
+        <Comment />
+      </Layout>
+
+
+    </>
   );
-};
+}
 
 export default App;

@@ -1,56 +1,11 @@
-import React,
-{
-useState
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  /* text-align: center; */
+  max-width: 1920px;
 }
 
-from 'react';
-import CommentForm from './components/CommentForm';
-import CommentList from './components/CommentList';
-import './index.css';
-
-const App=()=> {
-  const [submittedData,
-  setSubmittedData]=useState([]);
-  const [editIndex,
-  setEditIndex]=useState(null);
-
-  const editManager=(index)=> {
-    setEditIndex(index);
-  }
-
-  ;
-
-  return (<div className="container" > <h1>댓글창</h1> <button type="button" onClick= {
-      ()=> setEditIndex(null)
-    }
-
-    > 새로운 댓글 </button> <CommentForm submittedData= {
-      submittedData
-    }
-
-    setSubmittedData= {
-      setSubmittedData
-    }
-
-    editIndex= {
-      editIndex
-    }
-
-    setEditIndex= {
-      setEditIndex
-    }
-
-    /> <CommentList comments= {
-      submittedData
-    }
-
-    onEdit= {
-      editManager
-    }
-
-    /> </div>);
+* {
+  box-sizing: border-box;
 }
-
-;
-
-export default App;

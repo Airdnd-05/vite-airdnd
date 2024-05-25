@@ -1,0 +1,130 @@
+import {
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    Title,
+    Tooltip,
+} from 'chart.js';
+import React, { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
+import commentCheck from '../assets/comment_check.svg';
+import commentHowmuch from '../assets/comment_howmuch.svg';
+import commentKey from '../assets/comment_key.svg';
+import commentLeftWing from '../assets/comment_leftwing.svg';
+import commentRightWing from '../assets/comment_rightwing.svg';
+import commentSpray from '../assets/comment_spray.svg';
+import commentTalkbox from '../assets/comment_talkbox.svg';
+import commentWay from '../assets/comment_way.svg';
+import commentsData from '../comments.json';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+const ReviewDetails = () => {
+    const [comments, setComments] = useState([]);
+    const [averageRating, setAverageRating] = useState(0);
+    const [ratingCounts, setRatingCounts] = useState([0, 0, 0, 0, 0]);
+
+    useEffect(() => {
+        const fetchedComments = commentsData;
+        setComments(fetchedComments);
+
+        const ratings = fetchedComments.map(comment => comment.rating);
+        const avgRating = (ratings.reduce((acc, rating) => acc + rating, 0) / ratings.length).toFixed(1);
+        setAverageRating(avgRating);
+
+        const counts = [0, 0, 0, 0, 0];
+        ratings.forEach(rating => {
+            counts[5 - rating]++;
+        });
+        setRatingCounts(counts);
+    }, []);
+
+    if (comments.length < 3) {
+        return null;
+    }
+
+    const data = {
+        labels: ['5', '4', '3', '2', '1'],
+        datasets: [
+            {
+                label: 'Rating Counts',
+                data: ratingCounts,
+                backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                borderColor: 'rgba(255, 206, 86, 1)',
+                borderWidth: 1,
+            },
+        ],
+    };
+
+    const options = {
+        indexAxis: 'y',
+        scales: {
+            x: {
+                beginAtZero: true,
+                max: Math.max(...ratingCounts) + 1,
+            },
+        },
+    };
+
+    return (
+        <div className="max-w-2xl mx-auto p-4 text-center">
+            <div className="mb-8 relative inline-block">
+                <img src={commentLeftWing} alt="left wing" className="absolute left-12 top-1/2 transform -translate-y-1/2 w-12 h-12" />
+                <h1 className="text-6xl font-bold mb-2 inline-block mx-16">{averageRating}</h1>
+                <img src={commentRightWing} alt="right wing" className="absolute right-12 top-1/2 transform -translate-y-1/2 w-12 h-12" />
+            </div>
+            <p className="text-xl">게스트 선호</p>
+            <p className="text-md text-gray-500">평점, 후기, 신뢰도 기준</p>
+            <p className="text-md text-gray-500">에어비앤비에서 가장 사랑받는 숙소</p>
+            <div className="flex flex-wrap justify-around mb-8">
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4 w-40">
+                    <p className="font-semibold">전체 평점</p>
+                    <div className="w-full">
+                        <Bar data={data} options={options} />
+                    </div>
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">청결도</p>
+                    <p className="text-xl">5.0</p>
+                    <img src={commentSpray} alt="spray" className="w-8 h-8 mt-2" />
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">정확도</p>
+                    <p className="text-xl">5.0</p>
+                    <img src={commentCheck} alt="check" className="w-8 h-8 mt-2" />
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">체크인</p>
+                    <p className="text-xl">5.0</p>
+                    <img src={commentKey} alt="key" className="w-8 h-8 mt-2" />
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">의사소통</p>
+                    <p className="text-xl">5.0</p>
+                    <img src={commentTalkbox} alt="talkbox" className="w-8 h-8 mt-2" />
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">위치</p>
+                    <p className="text-xl">4.8</p>
+                    <img src={commentWay} alt="way" className="w-8 h-8 mt-2" />
+                </div>
+                <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">
+                    <p className="font-semibold">가격 대비 만족도</p>
+                    <p className="text-xl">4.9</p>
+                    <img src={commentHowmuch} alt="howmuch" className="w-8 h-8 mt-2" />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ReviewDetails;

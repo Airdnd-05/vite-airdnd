@@ -1,175 +1,30 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #fff;
+  color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* 전체 컨테이너 스타일 */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* 헤더 스타일 */
-h1 {
-  text-align: center;
-  color: #333;
-}
-
-/* 새로운 댓글 버튼 스타일 */
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* 폼 스타일 */
-form {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  width: 25%;
-  /* 크기 축소 */
-  margin-left: 75%;
-  /* 위치 조정 */
-}
-
-form div {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: calc(100% - 22px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: #007bff;
-}
-
-input[type="text"]:disabled,
-input[type="password"]:disabled {
-  background-color: #e9ecef;
-}
-
-/* 에러 메시지 스타일 */
-p {
-  color: red;
-  font-weight: bold;
-}
-
-/* 별점 컴포넌트 스타일 */
-.star-rating {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 5px;
-}
-
-.star-rating div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 댓글 리스트 스타일 */
-.comments {
-  margin-top: 20px;
-}
-
-.comment {
-  background-color: #f1f1f1;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.comment p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.comment button {
-  background-color: #ffc107;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.comment button:hover {
-  background-color: #e0a800;
-}
-
-/* 평균 평점 스타일 */
-.average-ratings {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.average-ratings h2 {
-  margin: 10px 0;
-}
-
-.average-ratings .overall-summary {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.average-ratings .overall-rating {
-  font-size: 2em;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 10px;
-}
-
-.total-comments {
-  font-size: 1em;
-  color: #666;
-}
-
-.average-ratings .rating-category {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.average-ratings .rating-category div {
-  text-align: center;
-}
-
-.average-ratings .rating-category div strong {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 1.1em;
-}
-
-.average-ratings .star-rating {
-  justify-content: center;
-}
