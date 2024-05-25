@@ -72,6 +72,7 @@ function Banner() {
         <EachImgBanner />
       </div>
     </ImgContextProvider>
+
   );
 }
 
@@ -80,6 +81,7 @@ function BannerTitle({ children }) {
 }
 
 function HeartButton() {
+
   const [valid, setValid] = useState(false);
   return (
     <button
