@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import detailPageBanner from '../detail-page-banner.json'
-import shareIcon from '../assets/shareIcon.svg'
-import unUseHeartIcon from '../assets/unUseHeartIcon.svg'
-import useHeartIcon from '../assets/useHeartIcon.svg'
+import detailPageBanner from '../detail-page-banner.json';
+import shareIcon from '../assets/shareIcon.svg';
+import unUseHeartIcon from '../assets/unUseHeartIcon.svg';
+import useHeartIcon from '../assets/useHeartIcon.svg';
 
 function ImgBanner({ src, dataOriginalUri }) {
   return (
@@ -36,7 +36,7 @@ function HeartButton({ useHeartIcon, unUseHeartIcon }) {
   const [valid, setValid] = useState(false);
   return (
     <button
-      className="flex p-2 hover:bg-gray-200"
+      className="flex p-2 hover:bg-gray-200 hover:rounded-lg transition-all items-center"
       onClick={() => {
         setValid(!valid);
       }}>
@@ -48,7 +48,7 @@ function HeartButton({ useHeartIcon, unUseHeartIcon }) {
 
 function ShareButton({ shareIcon }) {
   return (
-    <button className="flex p-2 mr-4 hover:bg-gray-200">
+    <button className="flex p-2 mr-4 hover:bg-gray-200 hover:rounded-lg transition-all items-center">
       <img className="mt-0.5 mr-2 size-5" src={shareIcon} />
       <div className="underline">공유하기</div>
     </button>
@@ -66,7 +66,7 @@ function DetailPageBanner() {
 
   return (
     <div>
-      <div className="flex justify-between mb-3">
+      <div className="flex justify-between py-6 items-center">
         <BannerTitle>{titleInfo}</BannerTitle>
 
         <div className="flex items-end">
