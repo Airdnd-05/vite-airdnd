@@ -6,7 +6,7 @@ import hostInfo from "../../host-detail.json"
 function HostIntro(){
 
     return (
-        <div className="ml-[4rem] mt-[1.2rem] ">
+        <div className="mt-[1.2rem] ">
         <div className='flex flex-row mb-[0.5rem] '>
         
         { hostInfo.hostProfile.hostLanguage && 
