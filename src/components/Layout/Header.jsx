@@ -6,8 +6,8 @@ import HeaderProfile from '../HeaderProfile.jsx';
 function Header() {
   return (
     <>
-      <header className="w-full h-[80px] bg-white border-b border-solid border-gray-200 px-20">
-        <div className="grid grid-cols-3 mx-56 h-[80px]">
+      <header className="h-[80px] bg-white border-b border-solid border-gray-200 px-20">
+        <div className="grid grid-cols-3 h-[80px] mx-[8.5rem]">
           <div className="flex">
             <img className="w-[102px]" src={HeaderLogo} />
           </div>

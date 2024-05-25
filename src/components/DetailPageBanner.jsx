@@ -85,7 +85,7 @@ function HeartButton() {
   const [valid, setValid] = useState(false);
   return (
     <button
-      className="flex p-2 hover:bg-gray-200"
+      className="flex p-2 hover:bg-gray-200 hover:rounded-lg transition-all items-center"
       onClick={() => {
         setValid(!valid);
       }}>
