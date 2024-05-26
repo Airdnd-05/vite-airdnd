@@ -19,6 +19,7 @@ import commentTalkbox from '../assets/comment_talkbox.svg';
 import commentWay from '../assets/comment_way.svg';
 import commentsData from '../comments.json';
 
+// Chart.js의 구성 요소를 등록합니다.
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -29,48 +30,53 @@ ChartJS.register(
 );
 
 const ReviewDetails = () => {
-    const [comments, setComments] = useState([]);
-    const [averageRating, setAverageRating] = useState(0);
-    const [ratingCounts, setRatingCounts] = useState([0, 0, 0, 0, 0]);
+    const [comments, setComments] = useState([]); // 댓글 데이터를 저장할 상태
+    const [averageRating, setAverageRating] = useState(0); // 평균 평점을 저장할 상태
+    const [ratingCounts, setRatingCounts] = useState([0, 0, 0, 0, 0]); // 각 평점의 개수를 저장할 상태
 
     useEffect(() => {
+        // commentsData에서 댓글을 가져와서 상태에 저장합니다.
         const fetchedComments = commentsData;
         setComments(fetchedComments);
 
+        // 댓글에서 평점을 추출하여 평균 평점을 계산합니다.
         const ratings = fetchedComments.map(comment => comment.rating);
         const avgRating = (ratings.reduce((acc, rating) => acc + rating, 0) / ratings.length).toFixed(1);
         setAverageRating(avgRating);
 
+        // 각 평점의 개수를 계산하여 상태에 저장합니다.
         const counts = [0, 0, 0, 0, 0];
         ratings.forEach(rating => {
-            counts[5 - rating]++;
+            counts[5 - rating]++; // 평점이 5일 경우 인덱스 0, 평점이 1일 경우 인덱스 4
         });
         setRatingCounts(counts);
     }, []);
 
+    // 댓글이 3개 미만일 경우 null을 반환하여 아무것도 렌더링하지 않습니다.
     if (comments.length < 3) {
         return null;
     }
 
+    // Chart.js의 데이터와 옵션을 설정합니다.
     const data = {
         labels: ['5', '4', '3', '2', '1'],
         datasets: [
             {
                 label: 'Rating Counts',
                 data: ratingCounts,
-                backgroundColor: 'rgba(255, 206, 86, 0.6)',
-                borderColor: 'rgba(255, 206, 86, 1)',
+                backgroundColor: 'rgba(255, 206, 86, 0.6)', // 바의 배경색
+                borderColor: 'rgba(255, 206, 86, 1)', // 바의 테두리 색
                 borderWidth: 1,
             },
         ],
     };
 
     const options = {
-        indexAxis: 'y',
+        indexAxis: 'y', // 수평 바 차트
         scales: {
             x: {
-                beginAtZero: true,
-                max: Math.max(...ratingCounts) + 1,
+                beginAtZero: true, // x축이 0부터 시작하도록 설정
+                max: Math.max(...ratingCounts) + 1, // x축의 최대값 설정
             },
         },
     };
@@ -89,7 +95,7 @@ const ReviewDetails = () => {
                 <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4 w-40">
                     <p className="font-semibold">전체 평점</p>
                     <div className="w-full">
-                        <Bar data={data} options={options} />
+                        <Bar data={data} options={options} /> {/* 전체 평점 바 차트 */}
                     </div>
                 </div>
                 <div className="flex flex-col items-center mb-4 border-l-2 border-gray-300 pl-4">

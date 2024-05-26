@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import commentsData from '../comments.json';
 
 const Comment = () => {
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState([]); // 댓글 데이터를 저장할 상태
 
     useEffect(() => {
-        setComments(commentsData.slice(0, 6)); // 최대 6개의 댓글만 표시
+        // commentsData에서 최대 6개의 댓글을 가져와서 상태에 저장합니다.
+        setComments(commentsData.slice(0, 6));
     }, []);
 
     return (
