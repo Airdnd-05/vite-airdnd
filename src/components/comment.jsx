@@ -9,7 +9,7 @@ const Comment = () => {
     }, []);
 
     return (
-        <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             {comments.length > 0 ? (
                 comments.map((comment, index) => (
                     <div key={index} className="border-t border-gray-300 pt-4 mt-4 flex">

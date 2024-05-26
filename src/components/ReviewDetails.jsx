@@ -76,11 +76,11 @@ const ReviewDetails = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-4 text-center">
+        <div className="max-w-2xl mx-auto p-4 text-center mb-6">
             <div className="mb-8 relative inline-block">
-                <img src={commentLeftWing} alt="left wing" className="absolute left-12 top-1/2 transform -translate-y-1/2 w-12 h-12" />
+                <img src={commentLeftWing} alt="left wing" className="absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12" />
                 <h1 className="text-6xl font-bold mb-2 inline-block mx-16">{averageRating}</h1>
-                <img src={commentRightWing} alt="right wing" className="absolute right-12 top-1/2 transform -translate-y-1/2 w-12 h-12" />
+                <img src={commentRightWing} alt="right wing" className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12" />
             </div>
             <p className="text-xl">게스트 선호</p>
             <p className="text-md text-gray-500">평점, 후기, 신뢰도 기준</p>
