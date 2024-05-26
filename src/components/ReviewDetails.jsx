@@ -19,7 +19,7 @@ import commentTalkbox from '../assets/comment_talkbox.svg';
 import commentWay from '../assets/comment_way.svg';
 import commentsData from '../comments.json';
 
-// Chart.js의 구성 요소를 등록합니다.
+// Chart.js의 구성 요소를 등록
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -35,24 +35,24 @@ const ReviewDetails = () => {
     const [ratingCounts, setRatingCounts] = useState([0, 0, 0, 0, 0]); // 각 평점의 개수를 저장할 상태
 
     useEffect(() => {
-        // commentsData에서 댓글을 가져와서 상태에 저장합니다.
+        // commentsData에서 댓글을 가져와서 상태에 저장
         const fetchedComments = commentsData;
         setComments(fetchedComments);
 
-        // 댓글에서 평점을 추출하여 평균 평점을 계산합니다.
+        // 댓글에서 평점을 추출하여 평균 평점을 계산
         const ratings = fetchedComments.map(comment => comment.rating);
         const avgRating = (ratings.reduce((acc, rating) => acc + rating, 0) / ratings.length).toFixed(1);
         setAverageRating(avgRating);
 
-        // 각 평점의 개수를 계산하여 상태에 저장합니다.
+        // 각 평점의 개수를 계산하여 상태에 저장
         const counts = [0, 0, 0, 0, 0];
         ratings.forEach(rating => {
-            counts[5 - rating]++; // 평점이 5일 경우 인덱스 0, 평점이 1일 경우 인덱스 4
+            counts[5 - rating]++;
         });
         setRatingCounts(counts);
     }, []);
 
-    // 댓글이 3개 미만일 경우 null을 반환하여 아무것도 렌더링하지 않습니다.
+    // 댓글이 3개 미만일 경우 출력안하기
     if (comments.length < 3) {
         return null;
     }
@@ -72,10 +72,10 @@ const ReviewDetails = () => {
     };
 
     const options = {
-        indexAxis: 'y', // 수평 바 차트
+        indexAxis: 'y', // 막대그래프
         scales: {
             x: {
-                beginAtZero: true, // x축이 0부터 시작하도록 설정
+                beginAtZero: true,
                 max: Math.max(...ratingCounts) + 1, // x축의 최대값 설정
             },
         },
