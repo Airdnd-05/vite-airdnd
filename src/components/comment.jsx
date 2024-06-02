@@ -20,7 +20,7 @@ const Comment = () => {
                         <div>
                             <p className="text-lg font-semibold">{comment.name}</p>
                             <p className="text-sm text-gray-600">{comment.location}</p>
-                            <p className="text-sm">{'★'.repeat(comment.rating)} {comment.date}</p>
+                            <p className="text-sm">{'★'.repeat(comment.rating)}{'☆'.repeat(5 - comment.rating)} {comment.date}</p>
                             <p className="mt-2">{comment.comment}</p>
                         </div>
                     </div>
