@@ -3,6 +3,7 @@ import {
   CategoryScale,
   Chart as ChartJS,
   Legend,
+  LinearScale,
   Title,
   Tooltip
 } from 'chart.js';
@@ -46,7 +47,7 @@ const ReviewDetails = () => {
     // 각 평점의 개수를 계산하여 상태에 저장
     const counts = [0, 0, 0, 0, 0];
     ratings.forEach(rating => {
-      counts[5 - rating]++;
+      counts[rating - 1]++;
     });
     setRatingCounts(counts);
   }, []);

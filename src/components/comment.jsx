@@ -2,9 +2,7 @@ import { useState } from 'react';
 import commentsData from '../comments.json';
 
 const Comment = () => {
-  const [comments, setComments] = useState(commentsData.slice(0, 6)); // 댓글 데이터를 저장할 상태 여기에 초기상태로 slice를 집어넣을것인가?
-
-
+  const [comments, setComments] = useState(commentsData.slice(0, 6));
 
   return (
     <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
