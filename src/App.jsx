@@ -15,6 +15,7 @@ function App() {
       <Layout>
         <DetailPageBanner />
         <BriefInfo />
+
         <HostDetail />
         <ReviewDetails />
         <Comment />

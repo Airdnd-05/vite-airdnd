@@ -4,6 +4,7 @@ import commentsData from '../comments.json';
 const Comment = () => {
   const [comments, setComments] = useState(commentsData.slice(0, 6));
 
+
   return (
     <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
       {comments.length > 0 ? (
@@ -26,6 +27,7 @@ const Comment = () => {
       )}
     </div>
   );
+
 };
 
 export default Comment;

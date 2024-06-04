@@ -5,7 +5,7 @@ import {
   Legend,
   LinearScale,
   Title,
-  Tooltip
+  Tooltip,
 } from 'chart.js';
 import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -47,7 +47,7 @@ const ReviewDetails = () => {
     // 각 평점의 개수를 계산하여 상태에 저장
     const counts = [0, 0, 0, 0, 0];
     ratings.forEach(rating => {
-      counts[rating - 1]++;
+      counts[5 - rating]++;
     });
     setRatingCounts(counts);
   }, []);
@@ -114,40 +114,40 @@ const ReviewDetails = () => {
       <p className="text-xl">게스트 선호</p>
       <p className="text-md text-gray-500">평점, 후기, 신뢰도 기준</p>
       <p className="text-md text-gray-500">에어비앤비에서 가장 사랑받는 숙소</p>
-      <div className="border border-gray-400 p-4 rounded-lg shadow-md">
+      <div className="border border-gray-400 p-4 rounded-lg shadow-md" style={{ background: 'linear-gradient(to right, white 0%, white 10%, #f8f8f8 10%, #f8f8f8 90%, white 90%, white 100%)' }}>
         <div className="flex flex-wrap justify-between mx-0 mb-8">
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%', backgroundColor: 'white' }}>
             <p className="font-semibold">전체 평점</p>
             <div className="w-full">
               <Bar data={data} options={options} /> {/* 전체 평점 바 차트 */}
             </div>
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%' }}>
             <p className="font-semibold">청결도</p>
             <p className="text-xl">5.0</p>
             <img src={commentSpray} alt="spray" className="w-8 h-8 mt-2" />
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%' }}>
             <p className="font-semibold">정확도</p>
             <p className="text-xl">5.0</p>
             <img src={commentCheck} alt="check" className="w-8 h-8 mt-2" />
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%' }}>
             <p className="font-semibold">체크인</p>
             <p className="text-xl">5.0</p>
             <img src={commentKey} alt="key" className="w-8 h-8 mt-2" />
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%' }}>
             <p className="font-semibold">의사소통</p>
             <p className="text-xl">5.0</p>
             <img src={commentTalkbox} alt="talkbox" className="w-8 h-8 mt-2" />
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%' }}>
             <p className="font-semibold">위치</p>
             <p className="text-xl">4.8</p>
             <img src={commentWay} alt="way" className="w-8 h-8 mt-2" />
           </div>
-          <div className="flex flex-col items-center mb-4 border border-gray-400 p-2" style={{ width: '12.5%' }}>
+          <div className="flex flex-col items-center mb-4 border border-gray-400 p-4 rounded-lg shadow-md" style={{ width: '12.5%', backgroundColor: 'white' }}>
             <p className="font-semibold">가격 대비 만족도</p>
             <p className="text-xl">4.9</p>
             <img src={commentHowmuch} alt="howmuch" className="w-8 h-8 mt-2" />
