@@ -1,10 +1,12 @@
 import './App.css';
 import DetailPageBanner from './components/DetailPageBanner.jsx';
 import Layout from './components/Layout/Layout.jsx';
-import HostDetail from './components/hostDetail/HostDetail.jsx'
-import BriefInfo from './components/briefInfo/BriefInfo.jsx';
+import ReviewDetails from './components/ReviewDetails';
 import AmenityInfo from './components/briefInfo/AmenityInfo.jsx';
-
+import BriefInfo from './components/briefInfo/BriefInfo.jsx';
+import Comment from './components/comment';
+import CommentModal from './components/commentModal.jsx';
+import HostDetail from './components/hostDetail/HostDetail.jsx';
 function App() {
   return (
     <>
@@ -13,6 +15,9 @@ function App() {
         <DetailPageBanner />
         <BriefInfo />
         <AmenityInfo />
+        <ReviewDetails />
+        <Comment />
+        <CommentModal />
         <HostDetail />
       </Layout>
     </>
